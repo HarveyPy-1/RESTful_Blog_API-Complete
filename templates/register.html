@@ -31,10 +31,12 @@
         {% endif %}
 {% endwith %}
       <div class="col-lg-8 col-md-10 mx-auto">
-
-       {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
-
-      </div>
+        {% if current_user.is_authenticated %}
+          <h2>You are already logged in as {{ current_user.name }}</h2>
+          <span class="subheading"><a href="{{ url_for('get_all_posts') }}">Go Home!</a></span>
+          {% else %}
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+          {% endif %}
     </div>
   </div>
 

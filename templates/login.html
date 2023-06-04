@@ -11,8 +11,10 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
+
             <h1>Log In</h1>
-            <span class="subheading">Welcome Back!</span>
+              <span class="subheading">Welcome Back!</span>
+
           </div>
         </div>
       </div>
@@ -31,7 +33,12 @@
         {% endif %}
 {% endwith %}
       <div class="col-lg-8 col-md-10 mx-auto content">
+          {% if current_user.is_authenticated %}
+          <h2>You are already logged in as {{ current_user.name }}</h2>
+          <span class="subheading"><a href="{{ url_for('get_all_posts') }}">Go Home!</a></span>
+          {% else %}
         {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+          {% endif %}
       </div>
     </div>
   </div>
