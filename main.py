@@ -358,6 +358,6 @@ def delete_post(post_id):
 if __name__ == "__main__":
     app.run(debug=True)
 
-# ADMIN: admin@email.com PASSWORD: admin
+
 # NEW_USER: new_user@email.com PASSWORD: 87654321
 
