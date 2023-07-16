@@ -4,4 +4,6 @@ Blog posts accept comments, all associated with the user.
 I have used my knowledge of advanced Python modules to create pages, define logic on all pages using Jinja 
 User passwords are encrypted with industry standard hashing before stored in the database using SQLAlchemy
 
-I think you'll find the site fully fleshed out.
+I think you'll find the site fully fleshed out. See it in action:
+
+https://flask-blog-tznv.onrender.com/
